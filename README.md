@@ -28,7 +28,7 @@ Your service methods can now use any of the above types as their return type.
 ```java
 interface MyService {
   @GET("/user")
-  Observable<NetworkResponse<User, Error>> getUser();
+  Single<NetworkResponse<User, Error>> getUser();
 }
 ```
 
