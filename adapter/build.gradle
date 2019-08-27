@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'BaseLibrary'
+    bintrayName = 'RxJava2NetworkResponseAdapter'
 
     publishedGroupId = 'be.mickverm.retrofit2'
     libraryName = 'RxJava2NetworkResponseAdapter'
