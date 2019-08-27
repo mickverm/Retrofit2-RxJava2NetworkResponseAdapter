@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'BaseLibrary'
+
+    publishedGroupId = 'be.mickverm.lib'
+    libraryName = 'BaseLibrary'
+    artifact = 'baselibrary'
+
+    libraryDescription = 'Template project used to create libraries which can be published to Bintray.'
+
+    siteUrl = 'https://github.com/mickverm/BaseBintrayLibrary'
+    gitUrl = 'https://github.com/mickverm/BaseBintrayLibrary.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'Mickverm'
+    developerName = 'Michiel Vermeersch'
+    developerEmail = 'mick.vermeersch@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+}
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
