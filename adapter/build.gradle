@@ -6,14 +6,14 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'BaseLibrary'
 
-    publishedGroupId = 'be.mickverm.lib'
-    libraryName = 'BaseLibrary'
-    artifact = 'baselibrary'
+    publishedGroupId = 'be.mickverm.retrofit2'
+    libraryName = 'RxJava2NetworkResponseAdapter'
+    artifact = 'adapter-rxjava2-network-response'
 
-    libraryDescription = 'Template project used to create libraries which can be published to Bintray.'
+    libraryDescription = 'An Adapter which allows NetworkResponse objects to be returned from RxJava2 streams.'
 
-    siteUrl = 'https://github.com/mickverm/BaseBintrayLibrary'
-    gitUrl = 'https://github.com/mickverm/BaseBintrayLibrary.git'
+    siteUrl = 'https://github.com/mickverm/Retrofit2-RxJava2NetworkResponseAdapter'
+    gitUrl = 'https://github.com/mickverm/Retrofit2-RxJava2NetworkResponseAdapter.git'
 
     libraryVersion = '1.0.0'
 
@@ -49,6 +49,10 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
 
     testImplementation "junit:junit:$junitVersion"
     testImplementation "org.robolectric:robolectric:$robolectricVersion"

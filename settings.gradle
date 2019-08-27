@@ -1,2 +1,2 @@
-include ':app', ':lib'
-rootProject.name='Base Library'
+include ':app', ':adapter'
+rootProject.name='RxJava2NetworkResponseCallAdapter'

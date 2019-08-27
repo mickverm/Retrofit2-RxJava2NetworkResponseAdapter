@@ -1,4 +1,4 @@
-package be.mickverm.lib
+package be.mickverm.retrofit2.adapter.rxjava2.networkresponse
 
 import org.junit.Test
 
